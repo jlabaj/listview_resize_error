@@ -15,27 +15,24 @@ import { CommonModule } from '@angular/common';
 import { sendRequestFactory } from './dx-http-client-helper';
 import { DxPopoverModule } from 'devextreme-angular';
 
-
 @NgModule({
-	imports: [
-		BrowserModule,
-		CommonModule,
-		BrowserAnimationsModule,
-		HttpClientModule,
-		FormsModule,
-		ReactiveFormsModule,
-		DxPopoverModule,
-		AngularSplitModule.forRoot(),
-		SortablejsModule.forRoot({ animation: 250, swapThreshold: .65 }),
-		SnotifyModule
-	],
-	declarations: [
-		AppComponent
-	],
-	bootstrap: [AppComponent]
+  imports: [
+    BrowserModule,
+    CommonModule,
+    BrowserAnimationsModule,
+    // HttpClientModule,
+    // FormsModule,
+    // ReactiveFormsModule,
+    // DxPopoverModule,
+    // AngularSplitModule.forRoot(),
+    // SortablejsModule.forRoot({ animation: 250, swapThreshold: .65 }),
+    // SnotifyModule
+  ],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent],
 })
 export class AppModule {
-	constructor(httpClient: HttpClient) {
-		devextremeAjax.inject({ sendRequest: sendRequestFactory(httpClient) });
-	}
+  // constructor(httpClient: HttpClient) {
+  // 	devextremeAjax.inject({ sendRequest: sendRequestFactory(httpClient) });
+  // }
 }
